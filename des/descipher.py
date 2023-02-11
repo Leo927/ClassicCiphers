@@ -107,7 +107,7 @@ class DES:
 {LatexConverter.convert_to_latex(f)}''')
 
     def calculate_next_left(self, current_round, next_round):
-        self.__left[next_round] = self.__left[current_round]
+        self.__left[next_round] = self.__right[current_round]
         print(f'''L_{next_round}=R_{current_round}={LatexConverter.convert_to_latex(self.__left[next_round])}''')
 
     def increment_round(self):
